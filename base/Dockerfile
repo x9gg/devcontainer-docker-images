@@ -25,8 +25,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Create dev user with sudo privileges (no password)
-RUN useradd -m -s /usr/bin/zsh -G sudo dev && \
+RUN groupadd -g 1337 dev && \
+    useradd -u 1337 -g 1337 -m -s /usr/bin/zsh -G sudo dev && \
     echo "dev ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/dev
 
 RUN mkdir -p /home/dev && chown -R dev:dev /home/dev
