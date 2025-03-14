@@ -7,12 +7,24 @@
 - `x9gg/image:nodejs-20` - Node.js 20 LTS
 - `x9gg/image:nodejs-22` - Node.js 22 Current
 
+## Folder Structure
+```
+base/             # Base image
+nodejs-20/        # Node.js 20 image
+nodejs-22/        # Node.js 22 image
+```
+
 ## Usage
 ```bash
 # Build
-docker build -t x9gg/image:base -f base.Dockerfile .
-docker build -t x9gg/image:nodejs-20 -f node-20.Dockerfile .
-docker build -t x9gg/image:nodejs-22 -f node-22.Dockerfile .
+cd base
+docker build -t x9gg/image:base .
+
+cd ../nodejs-20
+docker build -t x9gg/image:nodejs-20 .
+
+cd ../nodejs-22
+docker build -t x9gg/image:nodejs-22 .
 
 # Run
 docker run -it --rm x9gg/image:nodejs-20
@@ -20,5 +32,5 @@ docker run -it --rm x9gg/image:nodejs-20
 
 ## Features
 - ZSH shell with plugins
-- Dev user (uid 1337) with sudo
+- Dev user (uid 1337) with sudo (`no password`)
 - Common development tools
