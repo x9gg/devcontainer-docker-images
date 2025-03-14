@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -y \
     nano \
     traceroute \
     net-tools \
+    ca-certificates \
+    && mkdir -p /etc/apt/keyrings \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
