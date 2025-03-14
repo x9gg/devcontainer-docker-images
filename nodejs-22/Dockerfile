@@ -3,6 +3,7 @@ FROM x9gg/image:base
 ## Origin
 ## https://github.com/nodejs/docker-node/blob/main/22/bookworm-slim/Dockerfile
 
+USER root
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
