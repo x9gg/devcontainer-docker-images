@@ -3,9 +3,9 @@
 ## Base Image
 `x9gg/image:base` - Debian bookworm-slim based development environment with git, curl, wget, vim, nano, zsh, network utilities.
 
-## Node Images
-- `x9gg/image:nodejs-20` - Node.js 20 LTS
-- `x9gg/image:nodejs-22` - Node.js 22 Current
+## Node Images *LTS*
+- `x9gg/image:nodejs-20` - Node.js 20 
+- `x9gg/image:nodejs-22` - Node.js 22
 
 ## Folder Structure
 ```
