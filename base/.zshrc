@@ -236,3 +236,21 @@ fi
 
 ## custom script may be handy
 source $HOME/scripts/git-set-config.sh
+
+
+## custom aliases 
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ~='cd ~'
+
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias glog='git log --oneline --decorate --graph'
+alias gloga='git log --oneline --decorate --graph --all'

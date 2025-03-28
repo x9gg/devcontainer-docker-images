@@ -7,11 +7,15 @@
 - `x9gg/image:nodejs-20` - Node.js 20 
 - `x9gg/image:nodejs-22` - Node.js 22
 
+## Go latest (1.24.1)
+- `x9gg/image:go`        - go 1.24.1
+
 ## Folder Structure
 ```
 base/             # Base image
 nodejs-20/        # Node.js 20 image
 nodejs-22/        # Node.js 22 image
+go/               # go 1.24.1 image
 ```
 
 ## Usage
@@ -20,11 +24,14 @@ nodejs-22/        # Node.js 22 image
 cd base
 docker build -t x9gg/image:base .
 
-cd ../nodejs-20
+cd nodejs-20
 docker build -t x9gg/image:nodejs-20 .
 
-cd ../nodejs-22
+cd nodejs-22
 docker build -t x9gg/image:nodejs-22 .
+
+cd go
+docker build -t x9gg/image:go .
 
 # Run
 docker run -it --rm x9gg/image:nodejs-20
