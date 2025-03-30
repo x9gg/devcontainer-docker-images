@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-utils \
     git \
     zsh \
@@ -23,6 +23,10 @@ RUN apt-get update && apt-get install -y \
     traceroute \
     net-tools \
     ca-certificates \
+    tree \
+    python3 \
+    python-is-python3 \
+    python3-pip \
     && mkdir -p /etc/apt/keyrings \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
