@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     ca-certificates \
     tree \
+    make \
     python3 \
     python-is-python3 \
     python3-pip \
