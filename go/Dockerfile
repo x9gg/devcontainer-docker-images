@@ -12,7 +12,8 @@ ENV PATH=$PATH:/usr/local/go/bin
 ENV GOPATH=/go
 ENV PATH=$PATH:$GOPATH/bin
     
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" "$GOPATH/pkg"
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" "$GOPATH/pkg" "$GOPATH/pkg/mod" \
+    && chown -R dev:dev "$GOPATH"
 
 RUN go version
 
