@@ -4,7 +4,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LS_COLORS="di=34:ln=36:so=35:pi=33:ex=91:bd=43;33:cd=45;33:su=37;41:sg=30;43:tw=30;42:ow=34;42:*.gz=95:*.zip=91:*.jpg=93:*.mp4=96:*.mp3=92:*.txt=32"
 export GPG_TTY=$(tty)
-
+export PATH=/home/dev/.local/bin:$PATH
 
 setopt APPEND_HISTORY          # Append history to file, don’t overwrite
 setopt INC_APPEND_HISTORY      # Add commands to the history file as they are entered
