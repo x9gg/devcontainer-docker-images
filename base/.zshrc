@@ -233,6 +233,17 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
+## needed to load the sshkeys on shell start
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval $(ssh-agent -s) > /dev/null
+  
+  # Add all your private keys from ~/.ssh
+  for key in ~/.ssh/*; do
+    if [[ -f "$key" && ! "$key" =~ \.pub$ ]]; then
+      ssh-add "$key" 2>/dev/null
+    fi
+  done
+fi
 
 ## custom script may be handy
 source $HOME/scripts/git-set-config.sh
